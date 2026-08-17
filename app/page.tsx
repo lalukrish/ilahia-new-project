@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       {/* <HeroVideoSection videoSrc="/test.mp4" /> */}
       <HeroVideoSection
-        videoSrc="/home1.mp4"
+        videoSrc="/clg1.mp4"
         //   onMenuOpen={() => setMenuOpen(true)}
       />
       <LatestUpdatesSection />

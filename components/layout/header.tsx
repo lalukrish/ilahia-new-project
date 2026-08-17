@@ -193,7 +193,7 @@ export default function Header() {
             : "translate-y-0 opacity-100"
         }`}
       >
-        <div className="bg-[#e9eef7] text-black">
+        <div className="bg-cyan-900 text-white">
           <div className="mx-auto w-full 2xl:px-20 xl:px-4 lg:px-12 px-6">
             <div className="flex h-10 items-center justify-between text-xs">
               <div className="flex items-center gap-4">
