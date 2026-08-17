@@ -200,7 +200,7 @@ export default function Header() {
                 <a
                   target="_blank"
                   aria-label="Facebook"
-                  href="https://www.facebook.com/people/ICLC/61589228255487/"
+                  href=""
                   className="inline-flex items-center justify-center transition-transform duration-200 ease-out hover:scale-125 hover:text-black/70"
                 >
                   <FaFacebookF size={16} />
@@ -208,7 +208,7 @@ export default function Header() {
                 <a
                   target="_blank"
                   aria-label="Instagram"
-                  href="https://www.instagram.com/iclcindia/"
+                  href=""
                   className="inline-flex items-center justify-center transition-transform duration-200 ease-out hover:scale-125 hover:text-black/70"
                 >
                   <FaInstagram size={16} />
@@ -216,7 +216,7 @@ export default function Header() {
                 <a
                   target="_blank"
                   aria-label="Twitter"
-                  href="https://youtube.com/@iclc-india?si=UASqgTTNHsOJUCxW"
+                  href=""
                   className="inline-flex items-center justify-center transition-transform duration-200 ease-out hover:scale-125 hover:text-black/70"
                 >
                   <FaYoutube size={16} />
@@ -224,7 +224,7 @@ export default function Header() {
                 <a
                   target="_blank"
                   aria-label="LinkedIn"
-                  href="https://in.linkedin.com/company/indiancorporatelawchambers"
+                  href=""
                   className="inline-flex items-center justify-center transition-transform duration-200 ease-out hover:scale-125 hover:text-black/70"
                 >
                   <FaLinkedinIn size={16} />
@@ -232,7 +232,7 @@ export default function Header() {
               </div>
               <div className="hidden md:flex items-center gap-6">
                 <a
-                  href="tel:+91 9667547707"
+                  href="tel:+91 9400000707"
                   className="flex items-center gap-2 justify-center transition-transform duration-200 ease-out hover:scale-105 hover:text-black/70"
                 >
                   <Phone size={14} />
@@ -283,7 +283,7 @@ export default function Header() {
                       ? "https://icas.ac.in/uploads/downloads/assets/icaslogo.jpeg"
                       : "https://icas.ac.in/uploads/downloads/assets/icaslogo.jpeg"
                   }
-                  alt="ICLC"
+                  alt="Ilahia"
                   width={80}
                   height={80}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
