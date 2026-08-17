@@ -359,11 +359,9 @@ export default function Header() {
 
               <div className="flex items-center gap-4 flex-shrink-0 ">
                 <Button
-                  variant="outlined"
+                  variant="ghost"
                   className={`${
-                    isLight
-                      ? "!text-black border-black"
-                      : "!text-white border-white"
+                    isLight ? "!text-black " : "!text-white "
                   } hidden lg:flex !bg-transparent !shadow-none transition-colors duration-300`}
                   href="/contact-us"
                   iconRight={<MailIcon strokeWidth={1} />}
