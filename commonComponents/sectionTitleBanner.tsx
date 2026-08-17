@@ -114,7 +114,7 @@ export default function SectionTitleBanner({
   subtext,
   buttonLabel,
   onButtonClick = () => {},
-  fromColor = "#000000",
+  fromColor = "#f5b400",
   toColor = "#2c5364",
 }: SectionTitleBannerProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);

@@ -268,34 +268,30 @@ export default function Header() {
               ? undefined
               : {
                   background:
-                    "linear-gradient(180deg, rgba(0,0,0,0.55) 5%, rgba(0,0,0,0.35) 70%, rgba(0,0,0,0) 100%)",
+                    "linear-gradient(180deg, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.45) 70%, rgba(0,0,0,0) 100%)",
                 }
           }
         >
           <div
-            className={`mx-auto w-full px-4 md:px-0 lg:px-0 xl:px-0 2xl:px-20`}
+            className={`mx-auto w-full px-4 md:px-10 lg:px-6 xl:px-0 2xl:px-20`}
           >
-            <div className="flex h-20 items-center justify-between gap-8 xl:gap-4 2xl:gap-10">
+            <div className="flex h-20 items-center justify-between gap-4 lg:gap-3 xl:gap-4 2xl:gap-4">
               <Link href="/" aria-label="Home" className="flex-shrink-0">
                 <Image
-                  src={
-                    isLight
-                      ? "https://icas.ac.in/uploads/downloads/assets/icaslogo.jpeg"
-                      : "https://icas.ac.in/uploads/downloads/assets/icaslogo.jpeg"
-                  }
+                  src={isLight ? "/ilahia-logo3.png" : "/ilahia-logo4.png"}
                   alt="Ilahia"
                   width={80}
                   height={80}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
-                  className={`w-[70px] md:w-[35px] h-[40px] md:h-[60px] 2xl:h-[75px] 2xl:w-[105px]`}
+                  className={`w-[170px] md:w-[105px] h-[70px] md:h-[80px] 2xl:h-[105px] 2xl:w-[235px]`}
                 />
                 {/* <h1 className="text-black text-3xl">Ilahia</h1> */}
               </Link>
 
               <nav
                 ref={navRef}
-                className="hidden lg:flex items-center gap-8 xl:gap-4 2xl:gap-8 relative h-full flex-1 justify-center"
+                className="hidden lg:flex items-center gap-4 xl:gap-4 2xl:gap-5 relative h-full flex-1 justify-center"
                 onMouseEnter={handleNavEnter}
                 onMouseLeave={handleNavLeave}
               >
@@ -308,7 +304,7 @@ export default function Header() {
                     ? "text-[#B8860B]"
                     : "text-[#FFBE5E]";
                   const defaultColor = isLight ? "text-black" : "text-white";
-                  const labelClass = `font-medium font-secondary text-[14px] transition-colors duration-300 ${
+                  const labelClass = `font-medium font-secondary text-[12px] lg:text-[12px] md:text-[12px] 2xl:text-[13.5px] transition-colors duration-300 ${
                     isActive ? activeColor : defaultColor
                   }`;
 
@@ -358,7 +354,7 @@ export default function Header() {
               </nav>
 
               <div className="flex items-center gap-4 flex-shrink-0 ">
-                <Button
+                {/* <Button
                   variant="ghost"
                   className={`${
                     isLight ? "!text-black " : "!text-white "
@@ -367,8 +363,25 @@ export default function Header() {
                   iconRight={<MailIcon strokeWidth={1} />}
                 >
                   Contact Us
-                </Button>
-
+                </Button> */}
+                <Image
+                  src={isLight ? "/acc-logo1.png" : "/acc-logo1.png"}
+                  alt="Ilahia"
+                  width={80}
+                  height={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  className={`w-[40px] md:w-[25px] h-[40px] md:h-[80px] 2xl:h-[55px] 2xl:w-[55px]`}
+                />{" "}
+                <Image
+                  src={isLight ? "/acc-logo2.png" : "/acc-logo2.png"}
+                  alt="Ilahia"
+                  width={80}
+                  height={80}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  className={`w-[40px] md:w-[105px] h-[40px] md:h-[80px] 2xl:h-[55px] 2xl:w-[55px]`}
+                />
                 <button
                   className="lg:hidden"
                   onClick={() => setMobileMenuOpen(true)}

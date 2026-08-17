@@ -272,9 +272,9 @@ const DEFAULT_TILES: GalleryTile[] = [
   },
   {
     id: "t2",
-    media: ["/kathakali.jpg", "/campus-walk.mp4"],
+    media: ["/kathakali.jpg", "/home1.mp4"],
     shape: "portrait",
-    position: "left-36 top-56 md:left-60 md:top-8",
+    position: "right-36 top-56 md:right-40 md:top-8",
     size: "h-[150px] w-[110px] md:h-[180px] md:w-[135px]",
     floatDelay: 0.4,
   },
@@ -301,6 +301,14 @@ const DEFAULT_TILES: GalleryTile[] = [
     position: "left-14 bottom-4 md:bottom-16 md:left-90",
     size: "h-[130px] w-[170px] md:h-[150px] md:w-[200px]",
     floatDelay: 1.6,
+  },
+  {
+    id: "t7",
+    media: ["/test3.mp4"],
+    shape: "wide",
+    position: "-right-6 bottom-40 md:left-88 md:bottom-70",
+    size: "h-[160px] w-[220px] md:h-[190px] md:w-[260px]",
+    floatDelay: 2,
   },
   {
     id: "t6",

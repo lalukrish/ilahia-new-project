@@ -5,6 +5,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitleBanner from "@/commonComponents/sectionTitleBanner";
+import SectionCta from "@/commonComponents/SectionCta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +21,7 @@ interface CardItem {
 interface NotifItem {
   title: string;
   date: string;
+  image?: string; // shown inside the card, next to the title
 }
 
 const DEFAULT_CARDS: CardItem[] = [
@@ -30,17 +32,33 @@ const DEFAULT_CARDS: CardItem[] = [
 ];
 
 const DEFAULT_NOTIFS: NotifItem[] = [
-  { title: "Spring 2026 Registration is Now Open!", date: "July 17, 2026" },
-  { title: "Placement Drive begins next week", date: "July 20, 2026" },
-  { title: "New Innovation Lab inaugurated", date: "July 24, 2026" },
-  { title: "Alumni Meet 2026 registrations live", date: "July 29, 2026" },
+  {
+    title: "Spring 2026 Registration is Now Open!",
+    date: "July 17, 2026",
+    image: "/test5.jpg",
+  },
+  {
+    title: "Placement Drive begins next week",
+    date: "July 20, 2026",
+    image: "/test6.jpg",
+  },
+  {
+    title: "New Innovation Lab inaugurated",
+    date: "July 24, 2026",
+    image: "/testim1.png",
+  },
+  {
+    title: "Alumni Meet 2026 registrations live",
+    date: "July 29, 2026",
+    image: "/test1.png",
+  },
 ];
-
 interface HeroVideoSectionProps {
   videoSrc: string;
   cards?: CardItem[];
   notifications?: NotifItem[];
   onMenuOpen?: () => void;
+  onCtaClick?: () => void;
 }
 
 // shared responsive size classes — slot card + normal cards must match, row stays even
@@ -52,6 +70,7 @@ export default function HeroVideoSection({
   cards = DEFAULT_CARDS,
   notifications = DEFAULT_NOTIFS,
   onMenuOpen = () => {},
+  onCtaClick = () => {},
 }: HeroVideoSectionProps) {
   const ROW_SCROLL_FRACTION = 0.5; // 0-1 — how much of the row's width actually scrolls before next section
   const [muted, setMuted] = useState(true);
@@ -209,7 +228,7 @@ export default function HeroVideoSection({
         {/* gradient placeholder — shows till video can play, fades w/ chrome on scroll */}
         <div
           ref={gradientRef}
-          className="fixed left-0 top-0 h-screen w-full"
+          className=" pointer-events-none fixed left-0 top-0 h-screen w-full"
           style={{
             zIndex: 5,
             // background:
@@ -232,6 +251,8 @@ export default function HeroVideoSection({
             zIndex: 30,
             borderRadius: 0,
             opacity: videoReady ? 1 : 0,
+            willChange: "width, height, top, left, border-radius",
+            backfaceVisibility: "hidden",
           }}
         />
 
@@ -265,7 +286,7 @@ export default function HeroVideoSection({
           </button>
 
           {/* glass card, bottom-left — constant text now, no cycling */}
-          <div className="absolute bottom-40 left-8 z-10 md:bottom-32 md:left-10">
+          <div className="absolute bottom-40 left-8 z-10 md:bottom-32 md:left-10 2xl:left-24 2xl:bottom-40">
             <div
               className="pointer-events-auto max-w-md rounded-2xl border border-white/20 px-6 py-6 backdrop-blur-md md:px-8 md:py-8"
               style={{ background: "rgba(0,0,0,0.35)" }}
@@ -273,7 +294,7 @@ export default function HeroVideoSection({
               <h1 className="text-2xl font-bold leading-tight text-white md:text-4xl">
                 {HEADLINE}
               </h1>
-              <button className="mt-5 flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-medium text-black transition-transform duration-200 hover:scale-105">
+              <button className="mt-5 flex items-center gap-2 rounded-full bg-yellow-500 px-6 py-2.5 text-sm font-medium text-black transition-transform duration-200 hover:scale-105">
                 Campus Tour
                 <span aria-hidden="true">&rarr;</span>
               </button>
@@ -287,8 +308,6 @@ export default function HeroVideoSection({
                 (((i - notifIndex) % notifications.length) +
                   notifications.length) %
                 notifications.length;
-              // slot 0 = just exiting (top, fading up), 1 = current top card,
-              // 2 = peeking card underneath, 3+ = parked out of view below
               const translateY =
                 slot === 0 ? -40 : slot === 1 ? 0 : slot === 2 ? 64 : 140;
               const opacity =
@@ -304,13 +323,24 @@ export default function HeroVideoSection({
                     zIndex: slot === 1 ? 2 : 1,
                   }}
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <p className="text-sm font-semibold leading-snug text-white md:text-base">
-                      {n.title}
-                    </p>
-                    <span aria-hidden="true" className="text-white/70">
-                      &#8599;
-                    </span>
+                  <div className="flex items-start gap-3">
+                    {n.image && (
+                      <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg">
+                        <img
+                          src={n.image}
+                          alt=""
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-1 items-start justify-between gap-3">
+                      <p className="text-sm font-semibold leading-snug text-white md:text-base">
+                        {n.title}
+                      </p>
+                      <span aria-hidden="true" className="text-white/70">
+                        &#8599;
+                      </span>
+                    </div>
                   </div>
                   <div className="mt-3 flex items-center justify-between text-xs text-white/70">
                     <span>View</span>
@@ -403,6 +433,18 @@ export default function HeroVideoSection({
             </div>
           </div>
         </div>
+        <SectionCta
+          triggerRef={wrapperRef}
+          label="Take admission"
+          icon="arrow"
+          onClick={onCtaClick}
+          start="30% top"
+          end="95% top"
+          socialLinks={[
+            { icon: "instagram", href: "#" },
+            { icon: "linkedin", href: "#" },
+          ]}
+        />
       </div>
     </div>
   );

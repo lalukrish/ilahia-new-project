@@ -20,8 +20,8 @@ export default function AboutSection({
   onCtaClick = () => {},
   paragraph1 = "Ilahia College of Arts and Science was started under the auspices of Ilahia Trust in June 1995 and it completed 25 years of excellence in June 2020. The College is situated on a beautiful green hillock providing a panoramic view on Muvattupuzha – Perumbavoor route. The campus renders a calm and conducive atmosphere for dynamic study and academic activities.",
   paragraph2 = "Ilahia College of Arts and Science was started under the auspices of Ilahia Trust in June 1995 and it completed 25 years of excellence in June 2020. The College is situated on a beautiful green hillock providing a panoramic view on Muvattupuzha – Perumbavoor route. The campus renders a calm and conducive atmosphere for dynamic study and academic activities.",
-  image1 = "/testim1.png",
-  image2 = "/testim2.png",
+  image1 = "/test4.png",
+  image2 = "/test5.jpg",
 }: AboutSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null); // this section IS the CTA's trigger now
 
@@ -60,6 +60,7 @@ export default function AboutSection({
             title={heading}
             subtext="Discover our flexible admission process, eligibility criteria, and application steps to begin your academic journey with us."
             buttonLabel="Get Started"
+            toColor="#fff"
           />
           <button
             onClick={onCtaClick}

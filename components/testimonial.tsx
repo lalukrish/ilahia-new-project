@@ -50,7 +50,7 @@ const DEFAULT_TESTIMONIALS: Testimonial[] = [
     course: "B.Sc Psychology",
     quote:
       "The research opportunities in my final year shaped my entire career path.",
-    image: "/testimonials/meera.jpg",
+    image: "/testim5.png",
   },
 ];
 
