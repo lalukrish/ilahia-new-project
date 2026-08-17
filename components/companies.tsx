@@ -65,13 +65,13 @@ export default function PlacementsSection({
   };
 
   return (
-    <div className="px-6 py-16 md:px-10 lg:px-20">
-      <h2 className="text-3xl font-bold text-[#0f2027] md:text-4xl">
+    <div className="px-2 py-16 md:px-10 lg:px-20">
+      {/* <h2 className="text-3xl font-bold text-[#0f2027] md:text-4xl">
         {heading}
       </h2>
       <p className="mt-3 max-w-2xl text-sm text-black/65 md:text-base">
         {renderSubtext(subtext)}
-      </p>
+      </p> */}
 
       {/* dark stat panel */}
       <div

@@ -57,7 +57,7 @@ export default function StickyCtaButton({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-2 overflow-hidden rounded-full bg-black px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-transform duration-200 hover:scale-105 md:text-base ${className}`}
+      className={`flex items-center gap-2 overflow-hidden rounded-full bg-black px-8 py-4 text-xs md:text-sm font-semibold tracking-wide text-white shadow-lg transition-transform duration-200 hover:scale-105 md:text-base ${className}`}
     >
       <span ref={labelRef} style={{ display: "inline-block" }}>
         {label}

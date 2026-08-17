@@ -110,7 +110,7 @@ export default function MobileMegaMenu({ menu, onClose }: MobileMegaMenuProps) {
         ) : (
           <Link href="/" onClick={onClose}>
             <Image
-              src="/images/logo-dark.png"
+              src="https://icas.ac.in/uploads/downloads/assets/icaslogo.jpeg"
               alt="Ilahia Logo"
               width={80}
               height={20}
@@ -142,11 +142,11 @@ export default function MobileMegaMenu({ menu, onClose }: MobileMegaMenuProps) {
               >
                 <div className="flex gap-4">
                   <div
-                    className={`h-10 w-10 rounded-full flex items-center justify-center font-secondary ${
-                      isActive ? "bg-[#E8C9A0]" : "bg-[#F6E8D8]"
+                    className={`h-10 w-10 rounded-full flex items-center justify-center font-secondary text-white  ${
+                      isActive ? "bg-cyan-900" : "bg-cyan-600"
                     }`}
                   >
-                    {Icon && <Icon size={18} />}
+                    {Icon && <Icon size={18} className="text-white" />}
                   </div>
                   <p
                     className={`font-secondary mt-2 ${
@@ -172,8 +172,8 @@ export default function MobileMegaMenu({ menu, onClose }: MobileMegaMenuProps) {
                 className="flex gap-4"
               >
                 <div
-                  className={`h-10 w-10 rounded-full flex items-center justify-center font-secondary ${
-                    isActive ? "bg-[#E8C9A0]" : "bg-[#F6E8D8]"
+                  className={`h-10 w-10 rounded-full flex items-center justify-center font-secondary text-white  ${
+                    isActive ? "bg-cyan-900" : "bg-cyan-600"
                   }`}
                 >
                   {Icon && <Icon size={18} />}

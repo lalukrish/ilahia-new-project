@@ -265,7 +265,7 @@ export default function HeroVideoSection({
           </button>
 
           {/* glass card, bottom-left — constant text now, no cycling */}
-          <div className="absolute bottom-8 left-6 z-10 md:bottom-32 md:left-10">
+          <div className="absolute bottom-40 left-8 z-10 md:bottom-32 md:left-10">
             <div
               className="pointer-events-auto max-w-md rounded-2xl border border-white/20 px-6 py-6 backdrop-blur-md md:px-8 md:py-8"
               style={{ background: "rgba(0,0,0,0.35)" }}
@@ -281,7 +281,7 @@ export default function HeroVideoSection({
           </div>
 
           {/* notification stack, top-right — always 2 visible, new enters bottom, old exits top, loops */}
-          <div className="pointer-events-none absolute right-6 bottom-24 z-10 h-[170px] w-[300px] md:right-10 md:bottom-40 md:w-[340px]">
+          <div className="pointer-events-none absolute right-6 bottom-72 z-10 h-[170px] w-[300px] md:right-10 md:bottom-40 md:w-[340px]">
             {notifications.map((n, i) => {
               const slot =
                 (((i - notifIndex) % notifications.length) +
@@ -333,7 +333,7 @@ export default function HeroVideoSection({
         />
         <div
           ref={dockedTextRef}
-          className="absolute inset-0 z-10 flex flex-col justify-center px-6 md:px-10 lg:px-20"
+          className="absolute inset-0 z-10 flex flex-col justify-center px-2 md:px-10 lg:px-20"
         >
           {/* <h2 className="max-w-4xl text-3xl md:text-4xl font-normal leading-tight text-white ">
             Ilahia college Muvattupuzha
@@ -345,7 +345,7 @@ export default function HeroVideoSection({
             buttonLabel="Get Started"
             //  onButtonClick={() => router.push("/admissions")}
           />
-          <p className="max-w-4xl mb-10 mt-2 text-xl   md:text-lg font-semibold text-black/70">
+          <p className="max-w-4xl mb-10 mt-2 text-md   md:text-lg font-semibold text-black/70">
             Ilahia College of Arts and Science was started under the auspices of
             Ilahia Trust in June 1995 and it completed 31 years of excellence in
             June 2026.

@@ -45,18 +45,12 @@ export default function ProgramsSection({
   const active = activeTab === "UG" ? ugPrograms : pgPrograms;
 
   return (
-    <div className="px-6 py-16 md:px-10 lg:px-20">
+    <div className="px-2 py-16 md:px-10 lg:px-20">
       <h2 className="mb-8 text-center text-3xl font-bold text-[#0f2027] md:text-4xl">
         {heading}
       </h2>
 
-      <div
-        className="rounded-2xl p-6 md:p-10 border-2 border-[#16394a]"
-        style={{
-          background:
-            "linear-gradient(160deg, rgba(0,0,0,0.9) 0%, rgba(15,32,39,0.95) 45%, rgba(44,83,100,0.9) 100%)",
-        }}
-      >
+      <div className="rounded-2xl p-6 md:p-10 border-2 border-[#16394a] bg-cyan-900">
         {/* pill toggle — centered */}
         <div className="mb-8 flex justify-center">
           <div className="inline-flex gap-2 rounded-full bg-white/10 p-1.5">
@@ -87,7 +81,7 @@ export default function ProgramsSection({
             <div
               key={program.name}
               className="group flex cursor-pointer items-center justify-between gap-3 rounded-xl px-5 py-4 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-              style={{ background: "rgba(0,0,0,0.35)" }}
+              style={{ background: "rgba(0,0,0,0.15)" }}
             >
               <span className="text-sm font-medium text-white md:text-base">
                 {program.name}

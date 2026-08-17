@@ -154,7 +154,7 @@ export default function LatestUpdatesSection({
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`relative pb-4 text-sm font-semibold uppercase tracking-wide transition-colors ${
+            className={`relative pb-4 text-xs md:text-sm font-semibold uppercase tracking-wide transition-colors ${
               activeTab === tab
                 ? "text-[#2891be]"
                 : "text-black/40 hover:text-black/60"
